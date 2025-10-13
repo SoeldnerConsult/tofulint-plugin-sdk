@@ -14,7 +14,7 @@ import (
 // so it takes into account the hack on trailing newlines in heredoc.
 func ParseExpression(src []byte, filename string, start hcl.Pos) (hcl.Expression, hcl.Diagnostics) {
 	// Handle HCL files: .tf (Terraform HCL) and .hcl (HCL config like .tflint.hcl)
-	if strings.HasSuffix(filename, ".tf") || strings.HasSuffix(filename, ".hcl") {
+	if strings.HasSuffix(filename, ".tf") || strings.HasSuffix(filename, ".hcl") || strings.HasSuffix(filename, ".tofu") {
 		// HACK: Always add a newline to avoid heredoc parse errors.
 		// @see https://github.com/hashicorp/hcl/issues/441
 		src = []byte(string(src) + "\n")
@@ -33,7 +33,7 @@ func ParseExpression(src []byte, filename string, start hcl.Pos) (hcl.Expression
 		{
 			Severity: hcl.DiagError,
 			Summary:  "Unexpected file extension",
-			Detail:   fmt.Sprintf("The file name `%s` is a file with an unexpected extension. Valid extensions are `.tf`, `.tf.json`, `.hcl`, and `.json`.", filename),
+			Detail:   fmt.Sprintf("The file name `%s` is a file with an unexpected extension. Valid extensions are `.tf`, `.tofu`, `.tf.json`, `.tofu.json`, `.hcl`, and `.json`.", filename),
 		},
 	}
 }
