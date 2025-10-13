@@ -40,6 +40,13 @@ func TestRunner(t *testing.T, files map[string]string) *Runner {
 				t.Fatal(diags)
 			}
 			runner.config = config
+		}
+		if name == ".tofulint.hcl" {
+			var config Config
+			if diags := gohcl.DecodeBody(file.Body, nil, &config); diags.HasErrors() {
+				t.Fatal(diags)
+			}
+			runner.config = config
 		} else {
 			runner.addLocalFile(name, file)
 		}

@@ -147,7 +147,7 @@ func (c *GRPCClient) GetFile(file string) (*hcl.File, error) {
 
 	var f *hcl.File
 	var diags hcl.Diagnostics
-	if strings.HasSuffix(file, ".tf") {
+	if strings.HasSuffix(file, ".tf") || strings.HasSuffix(file, ".tofu") {
 		f, diags = hclsyntax.ParseConfig(resp.File, file, hcl.InitialPos)
 	} else {
 		f, diags = hcljson.Parse(resp.File, file)
@@ -171,7 +171,7 @@ func (c *GRPCClient) GetFiles() (map[string]*hcl.File, error) {
 	var diags hcl.Diagnostics
 	for name, bytes := range resp.Files {
 		var d hcl.Diagnostics
-		if strings.HasSuffix(name, ".tf") {
+		if strings.HasSuffix(name, ".tf") || strings.HasSuffix(name, ".tofu") {
 			f, d = hclsyntax.ParseConfig(bytes, name, hcl.InitialPos)
 		} else {
 			f, d = hcljson.Parse(bytes, name)
