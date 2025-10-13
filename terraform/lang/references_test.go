@@ -4,10 +4,10 @@ import (
 	"sort"
 	"testing"
 
+	"github.com/arsiba/tofulint-plugin-sdk/terraform/addrs"
 	"github.com/go-test/deep"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
-	"github.com/terraform-linters/tflint-plugin-sdk/terraform/addrs"
 )
 
 func TestReferencesInExpr(t *testing.T) {

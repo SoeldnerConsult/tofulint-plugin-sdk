@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/arsiba/tofulint-plugin-sdk/hclext"
+	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/plugin2host"
+	"github.com/arsiba/tofulint-plugin-sdk/tflint"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/hashicorp/go-plugin"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
-	"github.com/terraform-linters/tflint-plugin-sdk/hclext"
-	"github.com/terraform-linters/tflint-plugin-sdk/plugin/internal/plugin2host"
-	"github.com/terraform-linters/tflint-plugin-sdk/tflint"
 	"github.com/zclconf/go-cty/cty"
 )
 
@@ -245,7 +245,7 @@ func TestVersionConstraints(t *testing.T) {
 			ServerImpl: func() string {
 				return ""
 			},
-			Want:     minTFLintVersionConstraint.String(),
+			Want:     minTofuLintVersionConstraint.String(),
 			ErrCheck: neverHappend,
 		},
 		{
@@ -253,7 +253,7 @@ func TestVersionConstraints(t *testing.T) {
 			ServerImpl: func() string {
 				return ">= 1.0"
 			},
-			Want:     fmt.Sprintf(">= 1.0,%s", minTFLintVersionConstraint),
+			Want:     fmt.Sprintf(">= 1.0,%s", minTofuLintVersionConstraint),
 			ErrCheck: neverHappend,
 		},
 		{
@@ -444,7 +444,7 @@ func TestApplyGlobalConfig(t *testing.T) {
 			},
 			LegacyHost: true,
 			ErrCheck: func(err error) bool {
-				return err == nil || err.Error() != fmt.Sprintf("failed to satisfy version constraints; tflint-ruleset-test_ruleset requires %s, but TFLint version is 0.40 or 0.41", minTFLintVersionConstraint)
+				return err == nil || err.Error() != fmt.Sprintf("failed to satisfy version constraints; tflint-ruleset-test_ruleset requires %s, but TFLint version is 0.40 or 0.41", minTofuLintVersionConstraint)
 			},
 		},
 	}

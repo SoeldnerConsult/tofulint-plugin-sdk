@@ -3,18 +3,18 @@ package host2plugin
 import (
 	"context"
 
+	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/proto"
+	"github.com/arsiba/tofulint-plugin-sdk/tflint"
 	plugin "github.com/hashicorp/go-plugin"
 	"github.com/hashicorp/go-version"
-	"github.com/terraform-linters/tflint-plugin-sdk/plugin/internal/proto"
-	"github.com/terraform-linters/tflint-plugin-sdk/tflint"
 	"google.golang.org/grpc"
 )
 
 // SDKVersion is the SDK version.
 const SDKVersion = "0.23.0"
 
-// minTFLintVersionConstraint presents the minimum version of TFLint that this SDK supports.
-var minTFLintVersionConstraint = version.MustConstraints(version.NewConstraint(">= 0.46"))
+// minTofuLintVersionConstraint presents the minimum version of TofuLint that this SDK supports.
+var minTofuLintVersionConstraint = version.MustConstraints(version.NewConstraint(">= 0.0.1"))
 
 // handShakeConfig is used for UX. ProcotolVersion will be updated by incompatible changes.
 var handshakeConfig = plugin.HandshakeConfig{

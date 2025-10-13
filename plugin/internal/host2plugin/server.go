@@ -4,16 +4,16 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/arsiba/tofulint-plugin-sdk/internal"
+	"github.com/arsiba/tofulint-plugin-sdk/logger"
+	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/fromproto"
+	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/interceptor"
+	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/plugin2host"
+	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/proto"
+	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/toproto"
+	"github.com/arsiba/tofulint-plugin-sdk/tflint"
 	"github.com/hashicorp/go-plugin"
 	"github.com/hashicorp/go-version"
-	"github.com/terraform-linters/tflint-plugin-sdk/internal"
-	"github.com/terraform-linters/tflint-plugin-sdk/logger"
-	"github.com/terraform-linters/tflint-plugin-sdk/plugin/internal/fromproto"
-	"github.com/terraform-linters/tflint-plugin-sdk/plugin/internal/interceptor"
-	"github.com/terraform-linters/tflint-plugin-sdk/plugin/internal/plugin2host"
-	"github.com/terraform-linters/tflint-plugin-sdk/plugin/internal/proto"
-	"github.com/terraform-linters/tflint-plugin-sdk/plugin/internal/toproto"
-	"github.com/terraform-linters/tflint-plugin-sdk/tflint"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -83,7 +83,7 @@ func (s *GRPCServer) GetVersionConstraint(ctx context.Context, req *proto.GetVer
 		}
 	}
 	// Append a minimum supported version constraint
-	constraints = append(constraints, minTFLintVersionConstraint...)
+	constraints = append(constraints, minTofuLintVersionConstraint...)
 
 	return &proto.GetVersionConstraint_Response{Constraint: constraints.String()}, nil
 }
@@ -102,7 +102,7 @@ func (s *GRPCServer) GetConfigSchema(ctx context.Context, req *proto.GetConfigSc
 func (s *GRPCServer) ApplyGlobalConfig(ctx context.Context, req *proto.ApplyGlobalConfig_Request) (*proto.ApplyGlobalConfig_Response, error) {
 	// TFLint v0.41 and earlier does not check version constraints.
 	if !s.constraintChecked {
-		return nil, status.Error(codes.FailedPrecondition, fmt.Sprintf("failed to satisfy version constraints; tflint-ruleset-%s requires %s, but TFLint version is 0.40 or 0.41", s.impl.RuleSetName(), minTFLintVersionConstraint))
+		return nil, status.Error(codes.FailedPrecondition, fmt.Sprintf("failed to satisfy version constraints; tflint-ruleset-%s requires %s, but TFLint version is 0.40 or 0.41", s.impl.RuleSetName(), minTofuLintVersionConstraint))
 	}
 
 	if req.Config == nil {

@@ -1,8 +1,8 @@
 package helper
 
 import (
+	"github.com/arsiba/tofulint-plugin-sdk/tflint"
 	"github.com/hashicorp/hcl/v2"
-	"github.com/terraform-linters/tflint-plugin-sdk/tflint"
 )
 
 // Issue is a stub that has the same structure as the actually used issue object.

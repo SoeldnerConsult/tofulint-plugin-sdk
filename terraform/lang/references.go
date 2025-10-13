@@ -1,8 +1,8 @@
 package lang
 
 import (
+	"github.com/arsiba/tofulint-plugin-sdk/terraform/addrs"
 	"github.com/hashicorp/hcl/v2"
-	"github.com/terraform-linters/tflint-plugin-sdk/terraform/addrs"
 )
 
 // References finds all of the references in the given set of traversals,
