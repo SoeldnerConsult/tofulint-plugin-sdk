@@ -3,7 +3,7 @@ package interceptor
 import (
 	"context"
 
-	"github.com/terraform-linters/tflint-plugin-sdk/logger"
+	"github.com/arsiba/tofulint-plugin-sdk/logger"
 	"google.golang.org/grpc"
 )
 

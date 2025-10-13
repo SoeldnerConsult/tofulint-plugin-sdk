@@ -1,8 +1,8 @@
 package tflint
 
 import (
-	"github.com/terraform-linters/tflint-plugin-sdk/hclext"
-	"github.com/terraform-linters/tflint-plugin-sdk/logger"
+	"github.com/arsiba/tofulint-plugin-sdk/hclext"
+	"github.com/arsiba/tofulint-plugin-sdk/logger"
 )
 
 var _ RuleSet = &BuiltinRuleSet{}
