@@ -1,6 +1,6 @@
 package host2plugin
 
-import "github.com/arsiba/tofulint-plugin-sdk/plugin/internal/host2plugin"
+import "github.com/SoeldnerConsult/tofulint-plugin-sdk/plugin/internal/host2plugin"
 
 // Client is a host-side implementation. Host can send requests through the client to plugin's gRPC server.
 type Client = host2plugin.GRPCClient

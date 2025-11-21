@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/arsiba/tofulint-plugin-sdk/plugin/internal/proto";
+option go_package = "github.com/SoeldnerConsult/tofulint-plugin-sdk/plugin/internal/proto";
 
 package proto;
 

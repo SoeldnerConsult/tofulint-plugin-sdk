@@ -4,7 +4,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/arsiba/tofulint-plugin-sdk/terraform/addrs"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/terraform/addrs"
 	"github.com/go-test/deep"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"

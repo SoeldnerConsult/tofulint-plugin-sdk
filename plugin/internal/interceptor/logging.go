@@ -3,7 +3,7 @@ package interceptor
 import (
 	"context"
 
-	"github.com/arsiba/tofulint-plugin-sdk/logger"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/logger"
 	"google.golang.org/grpc"
 )
 

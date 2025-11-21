@@ -1,7 +1,7 @@
 # TFLint plugin SDK
-[![Build Status](https://github.com/arsiba/tofulint-plugin-sdk/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/arsiba/tofulint-plugin-sdk/actions)
-[![GitHub release](https://img.shields.io/github/release/arsiba/tofulint-plugin-sdk.svg)](https://github.com/arsiba/tofulint-plugin-sdk/releases/latest)
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/arsiba/tofulint-plugin-sdk)
+[![Build Status](https://github.com/SoeldnerConsult/tofulint-plugin-sdk/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/SoeldnerConsult/tofulint-plugin-sdk/actions)
+[![GitHub release](https://img.shields.io/github/release/SoeldnerConsult/tofulint-plugin-sdk.svg)](https://github.com/SoeldnerConsult/tofulint-plugin-sdk/releases/latest)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/SoeldnerConsult/tofulint-plugin-sdk)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-blue.svg)](LICENSE)
 
 [TFLint](https://github.com/terraform-linters/tflint) plugin SDK for building custom rules.
@@ -17,7 +17,7 @@ NOTE: This plugin system is experimental. This means that API compatibility is f
 
 Please refer to [tflint-ruleset-template](https://github.com/terraform-linters/tflint-ruleset-template) for an example plugin implementation using this SDK.
 
-For more details on the API, see https://pkg.go.dev/github.com/arsiba/tofulint-plugin-sdk.
+For more details on the API, see https://pkg.go.dev/github.com/SoeldnerConsult/tofulint-plugin-sdk.
 
 ## Developing
 

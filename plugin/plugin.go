@@ -1,10 +1,10 @@
 package plugin
 
 import (
-	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/host2plugin"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/plugin/internal/host2plugin"
 
 	// Import this package to initialize the global logger
-	_ "github.com/arsiba/tofulint-plugin-sdk/logger"
+	_ "github.com/SoeldnerConsult/tofulint-plugin-sdk/logger"
 )
 
 // ServeOpts is an option for serving a plugin.

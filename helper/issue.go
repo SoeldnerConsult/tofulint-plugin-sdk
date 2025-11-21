@@ -1,7 +1,7 @@
 package helper
 
 import (
-	"github.com/arsiba/tofulint-plugin-sdk/tflint"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/tflint"
 	"github.com/hashicorp/hcl/v2"
 )
 

@@ -1,8 +1,8 @@
 package tflint
 
 import (
-	"github.com/arsiba/tofulint-plugin-sdk/hclext"
-	"github.com/arsiba/tofulint-plugin-sdk/logger"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/hclext"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/logger"
 )
 
 var _ RuleSet = &BuiltinRuleSet{}

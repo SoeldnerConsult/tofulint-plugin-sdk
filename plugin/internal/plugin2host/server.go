@@ -3,11 +3,11 @@ package plugin2host
 import (
 	"context"
 
-	"github.com/arsiba/tofulint-plugin-sdk/hclext"
-	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/fromproto"
-	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/proto"
-	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/toproto"
-	"github.com/arsiba/tofulint-plugin-sdk/tflint"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/hclext"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/plugin/internal/fromproto"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/plugin/internal/proto"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/plugin/internal/toproto"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/tflint"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/zclconf/go-cty/cty"
 	"github.com/zclconf/go-cty/cty/json"

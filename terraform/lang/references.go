@@ -1,7 +1,7 @@
 package lang
 
 import (
-	"github.com/arsiba/tofulint-plugin-sdk/terraform/addrs"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/terraform/addrs"
 	"github.com/hashicorp/hcl/v2"
 )
 

@@ -1,4 +1,4 @@
-module github.com/arsiba/tofulint-plugin-sdk
+module github.com/SoeldnerConsult/tofulint-plugin-sdk
 
 go 1.24.0
 

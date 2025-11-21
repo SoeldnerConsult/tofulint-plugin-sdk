@@ -3,8 +3,8 @@ package host2plugin
 import (
 	"context"
 
-	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/proto"
-	"github.com/arsiba/tofulint-plugin-sdk/tflint"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/plugin/internal/proto"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/tflint"
 	plugin "github.com/hashicorp/go-plugin"
 	"github.com/hashicorp/go-version"
 	"google.golang.org/grpc"

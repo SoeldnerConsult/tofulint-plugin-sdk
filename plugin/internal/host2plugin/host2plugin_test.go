@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/arsiba/tofulint-plugin-sdk/hclext"
-	"github.com/arsiba/tofulint-plugin-sdk/plugin/internal/plugin2host"
-	"github.com/arsiba/tofulint-plugin-sdk/tflint"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/hclext"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/plugin/internal/plugin2host"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/tflint"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/hashicorp/go-plugin"
